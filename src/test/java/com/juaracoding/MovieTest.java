@@ -23,7 +23,7 @@ public class MovieTest {
                 .get(endpoint)
                 .then()
                 .statusCode(200)
-                .body("results.title[0]", equalTo("Inside Out 2"));
+                .body("results.title[0]", equalTo("Furiosa: A Mad Max Saga"));
     }
 
     @Test
@@ -35,7 +35,7 @@ public class MovieTest {
         Response response = request.get(endpoint);
         Assert.assertEquals(response.getStatusCode(),200);
         String titleMovie = response.getBody().jsonPath().getString("results.title[0]");
-        Assert.assertEquals(titleMovie,"Inside Out 2");
+        Assert.assertEquals(titleMovie,"Furiosa: A Mad Max Saga");
     }
 
 }
